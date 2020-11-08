@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" integrity="sha256-qM7QTJSlvtPSxVRjVWNM2OfTAz/3k5ovHOKmKXuYMO4=" crossorigin="anonymous"></script>
+<%- include ('../partials/head.ejs') -%>
+  </head>
+  <body>
+    <nav>
+      <%- include ('../partials/header.ejs') -%>
+    </nav>
+    <div class="container">
+      <h2>Improve this item</h2>
+        <div class="jumbo">
+          <form class="edit" action="/schedules/<%=schedule.id%>?_method=PUT" method="POST">
+            <label for="weeknumber">Name: </label>
+            <input type="number" name="weeknumber" value="<%=schedule.weeknumber%>" id="weeknumber">
+            <label for="sunday">Sunday Workout: </label>
+            <input type="text" name="sunday" value="<%=schedule.sunday%>" id="sunday">
+            <label for="monday">Monday Workout: </label>
+            <input type="text" name="monday" value="<%=schedule.monday%>" id="monday">
+            <label for="tuesday">Tuesday Workout: </label>
+            <input type="text" name="tuesday" value="<%=schedule.tuesday%>" id="tuesday">
+            <label for="wednesday">Wednesday Workout: </label>
+            <input type="text" name="wednesday" value="<%=schedule.wednesday%>" id="wednesday">
+            <label for="thursday">Thursday Workout: </label>
+            <input type="text" name="thursday" value="<%=schedule.thursday%>" id="thursday">
+            <label for="friday">Friday Workout: </label>
+            <input type="text" name="friday" value="<%=schedule.friday%>" id="friday">
+            <label for="saturday">Saturday Workout: </label>
+            <input type="text" name="saturday" value="<%=schedule.saturday%>" id="saturday">
+            <label for="img">Image: </label>
+            <input type="text" name="img" value="<%=schedule.img%>" id="img">
+            <label for="description">Description: </label>
+            <textarea name="description" value="" id="description"></textarea>
+            <label for="price">Miles Prescribed: </label>
+            <input type="number" name="price" value="<%=schedule.price || 0 %>" min="0" step=".01">
+            <label for="qty">Quantity: </label>
+            <input type="number" name="qty" value="<%=schedule.qty || 0 %>" min="0" id="qty"> <br>
+            <input type="submit" name="submit" value="submit" class="edit-button">
+          </form>
+            <h5>Current image:</h5>
+            <img src="<%= schedule.img %>" alt="An image of <%= schedule.name %>" />
+        </div>
+    </div>
+  </body>
+ 
+
+</html>
+<style>
+    
+    body, nav, html, div.jumbo:hover {
+	background: linear-gradient(-45deg,#B9A095,#BC857C,#A63372,#BF3099, #AC17BF, #9512A6);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+</style>

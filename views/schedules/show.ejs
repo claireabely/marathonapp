@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include ('../partials/head.ejs') -%>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;400&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" integrity="sha256-qM7QTJSlvtPSxVRjVWNM2OfTAz/3k5ovHOKmKXuYMO4=" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <nav>
+      <%- include ('../partials/header.ejs') -%>
+    </nav>
+    <div class="container">
+      <h2>Your Weekly  Training Plan</h2>
+        <div class="jumbo">
+         
+          <div class="calendar">
+  
+            <header>
+               
+                <div class="calendar__title" style="display: flex; justify-content: center; align-items: center">
+                  <div class="icon secondary chevron_left">‹</div>
+                  <h1 class="" style="flex: 1;"><span></span><strong> <h3>Week <%= schedule.weeknumber  %></h3></strong></h1>
+                  <div class="icon secondary chevron_left">›</div>
+                </div> 
+                <div style="align-self: flex-start; flex: 0 0 1"></div>
+            </header>
+            
+            <div class="outer">
+          
+            
+            <table>
+            <thead>
+              <tr>
+           
+                <th>Mon    </th>
+                <th>Tue    </th>
+                <th class="today">Wed   </th>
+                <th>Thu    </th>
+                <th>Fri    </th>
+                <th class="secondary">Sat   </th>
+                <th class="secondary">Sun   </th>
+              </tr>
+            </thead>
+            </table>
+          
+          <div class="wrap"> 
+            <table class="offset">
+          
+            <tbody>
+              <tr>
+              
+                
+                <td></td>
+                
+                <td></td>
+                
+                <td class="past"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+               
+                <td><div class="event double"><input id="check" type="checkbox" class="checkbox" /><label for="check"></label><div class= "train"><div class= "train"><%= schedule.monday  %></div></div></div></div></td>
+                <td><div class="event double"><input id="check" type="checkbox" class="checkbox" /><label for="check"></label><div class= "train"><%= schedule.tuesday  %></div></div></div></td>
+                <td><div class="event double"><input id="check" type="checkbox" class="checkbox" /><label for="check"></label><div class= "train"><%= schedule.wednesday  %></div></div></div></td>
+                <td><div class="event double"><input id="check" type="checkbox" class="checkbox" /><label for="check"></label><div class= "train"><%= schedule.thursday  %></div></div></div></td>
+                <td><div class="event double"><input id="check" type="checkbox" class="checkbox" /><label for="check"></label><div class= "train"><%= schedule.friday  %></div></div></div></td>
+                <td><div class="event double"><input id="check" type="checkbox" class="checkbox" /><label for="check"></label><div class= "train"><%= schedule.saturday  %></div></div></div></td>
+                <td><div class="event double"><input id="check" type="checkbox" class="checkbox" /><label for="check"></label><div class= "train"><%= schedule.sunday  %></div></div></div></td>
+              </tr>
+              <tr>
+              
+                <td></td>
+                <td></td>
+                <td class="past"></td>
+                <td></td>
+                <td></td>
+                <td class="now"></td>
+                <td></td>
+              </tr>
+              <tr>
+         
+                <td></td>
+                <td></td>
+                <td class="past"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                
+                <td></td>
+                <td></td>
+                <td ></td>
+                <td></td>
+
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+              
+                <td></td>
+                <td></td>
+                
+                <td></td>
+                <td></td>
+                
+                <td></td>
+                <td></td>
+                
+                <td></td>
+              </tr>
+              <tr>
+             
+                <td></td>
+                <td></td>
+                <td></div></div></div></td>
+                
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+         
+            </tbody>
+          </table>
+          </div>
+          </div>
+          </div>
+          
+      
+            <img src="<%= schedule.img %>" alt="An image of <%= schedule.name %>" class="jumbo-img" />
+            <iframe height='500' width='300' frameborder='0' allowtransparency='true' scrolling='yes' src='https://www.strava.com/athletes/41240343/latest-rides/29e8e31373674e246d80850b8ace55c1d3fd5a5e'></iframe>
+     
+              <iframe height='405' width='590' frameborder='0' allowtransparency='true' scrolling='no'  src="<%= schedule.iframe %>" alt="An image of <%= schedule.name %>" />
+<br>
+<br>
+            <p class="description"><%=schedule.description %></p>
+            <% if (schedule.qty <= 0) { %>
+              <h4 class="out-of-stock"> OUT OF STOCK </h4>
+            <% } else   { %>
+            <h6>Only <%= schedule.qty %> remaining</h6>
+            <form action="/schedules/<%=schedule.id%>/buy?_method=put" method="POST">
+              <button class="buy-button">Log</button>
+            </form>
+            <h4>Miles Prescribed: <%= schedule.price %></h4>
+          
+            <% } %>
+        </div>
+        <div class="admin-actions">
+          <a href="/schedules/<%=schedule.id%>/edit"><button type="button" name="button" class="edit-button">Edit</button></a>
+          <form action="/schedules/<%=schedule.id%>?_method=DELETE" method="POST">
+            <button class="delete-button">DELETE</button>
+          </form>
+        </div>
+    </div>
+
+    
+  </body>
+</html>
+<style>
+body, nav, html, div.jumbo {
+	/* background: linear-gradient(-45deg,  #e4e6f2, #9aafd9, #5e7ebf, #2f4073, #212940);
+	background-size: 400% 400%;
+  animation: gradient 15s ease infinite; */
+  background: black;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+.description{
+  color: white;
+}
+
+#description{
+  color: white;
+}
+
+
+
+</style>

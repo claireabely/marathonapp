@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include ('../partials/head.ejs') -%>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;400&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <nav>
+      <%- include ('../partials/header.ejs') -%>
+    </nav>
+    <div class="container">
+      <h2>Add Your Completed Workouts </h2>
+        <div class="jumbo">
+          <form class="edit" action="/schedules" method="POST">
+            <label for="weeknumber">Name: </label>
+            <input type="number" name="weeknumber" value="" required id="weeknumber">
+            <label for="sunday">Sunday Workout: </label>
+            <input type="text" name="sunday" value="" required id="sunday">
+            <label for="monday">Monday Workout: </label>
+            <input type="text" name="monday" value="" required id="monday">
+            <label for="tuesday">Tuesday Workout: </label>
+            <input type="text" name="tuesday" value="" required id="tuesday">
+            <label for="wednesday">Wednesday Workout: </label>
+            <input type="text" name="wednesday" value="" required id="wednesday">
+            <label for="thursday">Thursday Workout: </label>
+            <input type="text" name="thursday" value="" required id="thursday">
+            <label for="friday">Friday Workout: </label>
+            <input type="text" name="friday" value="" required id="friday">
+            <label for="saturday">Saturday Workout: </label>
+            <input type="text" name="saturday" value="" required id="saturday">
+            <label for="img">Image: </label>
+            <input type="text" name="img" value="" id="img">
+            <label for="description">Notes: </label>
+            <textarea name="description" value="" id="description"></textarea>
+            <label for="price">Miles Completed </label>
+            <input type="number" name="price" min="0" step=".01" value="0" id="price">
+            <label for="qty">Quantity: </label>
+            <input type="number" name="qty"  pattern="[0-9]*" min="0" value="0" id="qty"><br>
+            <input type="submit" name="submit" value="submit" class="edit-button">
+          </form>
+        </div>
+    </div>
+
+    
+  </body>
+</html>
+<style>
+    
+  body, nav, html, div.jumbo {
+background: black;
+background-size: 400% 400%;
+animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+0% {
+  background-position: 0% 50%;
+}
+50% {
+  background-position: 100% 50%;
+}
+100% {
+  background-position: 0% 50%;
+}
+}
+</style>

@@ -1,21 +1,34 @@
 <!DOCTYPE html>
 <html>
   <head>
-   <!-- Compiled and minified CSS -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
-   <!-- Compiled and minified JavaScript -->
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    
+    <link rel="stylesheet" href="/css/normalize.css">
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/skeleton.css">
+<link rel="stylesheet" href="/css/main.css">
+<link rel="icon" href="/assets/$.png">
+    <%- include ('../partials/head.ejs') -%>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;400&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" integrity="sha256-qM7QTJSlvtPSxVRjVWNM2OfTAz/3k5ovHOKmKXuYMO4=" crossorigin="anonymous"></script>
-<%- include ('../partials/head.ejs') -%>
-  </head>
+
+
+</head>
   <body>
     <nav>
-      <%- include ('../partials/header.ejs') -%>
+
+      <nav class="navbar navbar-solid-transition">
+        
+        <div class="nav-wrapper">
+          <a href="horizontal-half.html" class="brand-logo"><i class="icon-diamond"></i></a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+          
+            <%- include ('../partials/header.ejs') -%>
+         </ul>
+  
+        </div>
+     
     </nav>
     <div class="container">
-      <h2>Improve this item</h2>
+      <h2>Edit Your Training Plan</h2>
         <div class="jumbo">
           <form class="edit" action="/schedules/<%=schedule.id%>?_method=PUT" method="POST">
             <label for="weeknumber">Name: </label>
@@ -55,7 +68,7 @@
 <style>
     
     body, nav, html, div.jumbo:hover {
-	background: linear-gradient(-45deg,#B9A095,#BC857C,#A63372,#BF3099, #AC17BF, #9512A6);
+background: black;
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
 }

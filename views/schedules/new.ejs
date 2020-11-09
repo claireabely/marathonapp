@@ -12,7 +12,7 @@
       <h2>Add Your Completed Workouts </h2>
         <div class="jumbo">
           <form class="edit" action="/schedules" method="POST">
-            <label for="weeknumber">Name: </label>
+            <label for="weeknumber">Week Number: </label>
             <input type="number" name="weeknumber" value="" required id="weeknumber">
             <label for="sunday">Sunday Workout: </label>
             <input type="text" name="sunday" value="" required id="sunday">
@@ -34,9 +34,15 @@
             <textarea name="description" value="" id="description"></textarea>
             <label for="price">Miles Completed </label>
             <input type="number" name="price" min="0" step=".01" value="0" id="price">
-            <label for="qty">Quantity: </label>
             <input type="number" name="qty"  pattern="[0-9]*" min="0" value="0" id="qty"><br>
             <input type="submit" name="submit" value="submit" class="edit-button">
+          
+          
+            <div class="center">
+              <iframe height='500' width='300' frameborder='0' allowtransparency='true' scrolling='yes' src='https://www.strava.com/athletes/41240343/latest-rides/29e8e31373674e246d80850b8ace55c1d3fd5a5e'></iframe>
+              <iframe height='200' width='300' frameborder='0' allowtransparency='true' scrolling='yes' src='https://www.strava.com/athletes/41240343/activity-summary/29e8e31373674e246d80850b8ace55c1d3fd5a5e'></iframe>
+          </div>
+          <div id="data"></div>
           </form>
         </div>
     </div>

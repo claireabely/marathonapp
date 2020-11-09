@@ -135,13 +135,11 @@
       
             <img src="<%= schedule.img %>" alt="An image of <%= schedule.name %>" class="jumbo-img" />
             <iframe height='500' width='300' frameborder='0' allowtransparency='true' scrolling='yes' src='https://www.strava.com/athletes/41240343/latest-rides/29e8e31373674e246d80850b8ace55c1d3fd5a5e'></iframe>
-     
-              <iframe height='405' width='590' frameborder='0' allowtransparency='true' scrolling='no'  src="<%= schedule.iframe %>" alt="An image of <%= schedule.name %>" />
-<br>
-<br>
+            <!-- <iframe height='500' width='300'  frameborder='0' allowtransparency='true' scrolling='yes'  src="<%= schedule.iframe %>" alt="An image of <%= schedule.name %>" /> -->
+
             <p class="description"><%=schedule.description %></p>
             <% if (schedule.qty <= 0) { %>
-              <h4 class="out-of-stock"> OUT OF STOCK </h4>
+              <h4 class="out-of-stock"></h4>
             <% } else   { %>
             <h6>Only <%= schedule.qty %> remaining</h6>
             <form action="/schedules/<%=schedule.id%>/buy?_method=put" method="POST">
@@ -156,6 +154,7 @@
           <form action="/schedules/<%=schedule.id%>?_method=DELETE" method="POST">
             <button class="delete-button">DELETE</button>
           </form>
+      
         </div>
     </div>
 

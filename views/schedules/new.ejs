@@ -1,18 +1,44 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="/css/normalize.css">
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/skeleton.css">
+<link rel="stylesheet" href="/css/main.css">
+<link rel="icon" href="/assets/$.png">
     <%- include ('../partials/head.ejs') -%>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;400&display=swap" rel="stylesheet">
-  </head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" integrity="sha256-qM7QTJSlvtPSxVRjVWNM2OfTAz/3k5ovHOKmKXuYMO4=" crossorigin="anonymous"></script>
+
+         <!--JavaScript at end of body for optimized loading-->
+         <script type="text/javascript" src="js/materialize.min.js"></script>
+     
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;400&display=swap" rel="stylesheet">
+ 
+</head>
   <body>
     <nav>
-      <%- include ('../partials/header.ejs') -%>
-    </nav>
+
+     
+        
+  
+         
+          
+            <%- include ('../partials/header.ejs') -%>
+    
+  
+        </div>
+      </nav>
+   
+       <body>
+   
+
     <div class="container">
-      <h2>Add Your Completed Workouts </h2>
+      <h2>Add Your Completed Workouts🏃‍♀️🏃</h2>
+
         <div class="jumbo">
           <form class="edit" action="/schedules" method="POST">
-            <label for="weeknumber">Week Number: </label>
+            <label for="weeknumber">Training Plan Week: </label>
             <input type="number" name="weeknumber" value="" required id="weeknumber">
             <label for="sunday">Sunday Workout: </label>
             <input type="text" name="sunday" value="" required id="sunday">
@@ -28,21 +54,14 @@
             <input type="text" name="friday" value="" required id="friday">
             <label for="saturday">Saturday Workout: </label>
             <input type="text" name="saturday" value="" required id="saturday">
-            <label for="img">Image: </label>
+            <label for="img">Add An Image Link: </label>
             <input type="text" name="img" value="" id="img">
             <label for="description">Notes: </label>
             <textarea name="description" value="" id="description"></textarea>
-            <label for="price">Miles Completed </label>
+            <label for="price"> Total Miles Completed </label>
             <input type="number" name="price" min="0" step=".01" value="0" id="price">
-            <input type="number" name="qty"  pattern="[0-9]*" min="0" value="0" id="qty"><br>
+       
             <input type="submit" name="submit" value="submit" class="edit-button">
-          
-          
-            <div class="center">
-              <iframe height='500' width='300' frameborder='0' allowtransparency='true' scrolling='yes' src='https://www.strava.com/athletes/41240343/latest-rides/29e8e31373674e246d80850b8ace55c1d3fd5a5e'></iframe>
-              <iframe height='200' width='300' frameborder='0' allowtransparency='true' scrolling='yes' src='https://www.strava.com/athletes/41240343/activity-summary/29e8e31373674e246d80850b8ace55c1d3fd5a5e'></iframe>
-          </div>
-          <div id="data"></div>
           </form>
         </div>
     </div>

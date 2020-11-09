@@ -44,7 +44,7 @@ footer,
 header,
 main, /* 2 */
 menu,
-nav,
+
 section,
 summary { /* 1 */
   display: block;

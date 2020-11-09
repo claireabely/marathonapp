@@ -1,14 +1,33 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="/css/normalize.css">
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/skeleton.css">
+<link rel="stylesheet" href="/css/main.css">
+<link rel="icon" href="/assets/$.png">
     <%- include ('../partials/head.ejs') -%>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;400&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" integrity="sha256-qM7QTJSlvtPSxVRjVWNM2OfTAz/3k5ovHOKmKXuYMO4=" crossorigin="anonymous"></script>
-  </head>
+
+
+</head>
   <body>
     <nav>
-      <%- include ('../partials/header.ejs') -%>
-    </nav>
+
+      <nav class="navbar navbar-solid-transition">
+        
+        <div class="nav-wrapper">
+          <a href="horizontal-half.html" class="brand-logo"><i class="icon-diamond"></i></a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+          
+            <%- include ('../partials/header.ejs') -%>
+         </ul>
+  
+        </div>
+      </nav>
+    
+  
     <div class="container">
       <h2>Your Weekly  Training Plan</h2>
         <div class="jumbo">
@@ -135,13 +154,15 @@
       
             <img src="<%= schedule.img %>" alt="An image of <%= schedule.name %>" class="jumbo-img" />
             <iframe height='500' width='300' frameborder='0' allowtransparency='true' scrolling='yes' src='https://www.strava.com/athletes/41240343/latest-rides/29e8e31373674e246d80850b8ace55c1d3fd5a5e'></iframe>
-            <!-- <iframe height='500' width='300'  frameborder='0' allowtransparency='true' scrolling='yes'  src="<%= schedule.iframe %>" alt="An image of <%= schedule.name %>" /> -->
-
+     
+            
+<br>
+<br>
             <p class="description"><%=schedule.description %></p>
             <% if (schedule.qty <= 0) { %>
-              <h4 class="out-of-stock"></h4>
+              <h4 class="out-of-stock"> OUT OF STOCK </h4>
             <% } else   { %>
-            <h6>Only <%= schedule.qty %> remaining</h6>
+           
             <form action="/schedules/<%=schedule.id%>/buy?_method=put" method="POST">
               <button class="buy-button">Log</button>
             </form>
@@ -154,7 +175,6 @@
           <form action="/schedules/<%=schedule.id%>?_method=DELETE" method="POST">
             <button class="delete-button">DELETE</button>
           </form>
-      
         </div>
     </div>
 

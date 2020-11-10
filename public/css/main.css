@@ -133,6 +133,18 @@ img {
 }
 
 
+
+img2 {
+  max-width: 90%;
+  max-height: 10vmax;
+}
+
+.cardone img2:hover {
+  box-shadow: 0 0 8px #96DADD;
+}
+
+
+
 p {
   max-width:70%;
   margin: auto;
@@ -193,6 +205,12 @@ input.edit-button , .edit-button:hover {
 }
 
 .schedules {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.races {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;

@@ -21,7 +21,22 @@
     <!-- Navbar -->
     <nav style= "background: #cbdc00;" class="navbar navbar-solid-transition" >
       <%- include ('../partials/header.ejs') -%>
-    
+      <div style= "background: #cbdc00;" class="nav-wrapper">
+        <a href="horizontal-half.html" class="brand-logo"><i class="icon-diamond"></i></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+     
+        </ul>
+
+        <ul id="pages" class="dropdown-content">
+          <li><a href="horizontal-half.html">Horizontal Halves</a></li>
+          <li><a href="sierra.html">Zoom Out</a></li>
+          <li><a href="circle-reveal.html">Circle Reveal</a></li>
+          <li><a href="phone-wall.html">Phone Wall</a></li>
+          <li><a href="element-transitions.html">Element Transitions</a></li>
+          <li><a class="active" href="basic-elements.html">Basic Elements</a></li>
+          <li><a href="card-shuffle.html">Shuffle</a></li>
+          <li><a href="postcards.html">Postcards</a></li>
+        </ul>
 
         <a href="#" data-target="slide-out" class="sidenav-trigger button-collapse right"><i class="material-icons white-text">menu</i></a>
       </div>
@@ -63,30 +78,40 @@
     </div>
 
     <!-- Features -->
-    <div class="container">
-      <div class= "board">
-       
-       
-     <h2>Choose your week🏅</h2>
-     <div class="schedules">
-       <% schedules.forEach( schedule => { %>
-         <div class="card">
-           <h5>Week <%= schedule.weeknumber %></h5>
-           
-           <a href="/schedules/<%=schedule.id%>">
-             <img src="<%= schedule.img %>" alt="An image of <%= schedule.name %>" /></a>
-             <h6>Miles Prescribed: <%=schedule.price %></h6>
-             <a href="/schedules/<%=schedule.id%>">
-             <iframes height='405' width='590' frameborder='0' allowtransparency='true' scrolling='no'  src="<%= schedule.iframe %>" alt="An image of <%= schedule.iframe %>" /></a>
-
-         </div>
-       <% }) %>
-     </div>
-  
-   </div>
+    
 
     <!-- Clients -->
- 
+    <div class="section black clients">
+      <div class="container">
+        <h2 class="section-title">Past Races</h2>
+      </div>
+      <div class="row">
+        <a href="#!" class="col s12 m6 l4 client black">
+          <img class="logo" src="https://i.imgur.com/3KEOLq1.jpg" alt="google">
+          <span class="title">Berlin</span>
+        </a>
+        <a style= "background: #cbdc00" href="#!" class="col s12 m6 l4 client black">
+          <img class="logo" src="https://i.imgur.com/loxmWgn.jpg" alt="snapchat">
+          <span class="title">Brooklyn</span>
+        </a>
+        <a href="#!" class="col s12 m6 l4 client black" style= "background: #cbdc00">
+          <img class="logo" src="https://i.imgur.com/oDO3Txm.jpg" alt="messenger">
+          <span class="title">NYC</span>
+        </a>
+        <a href="#!" class="col s12 m6 l4 client black">
+          <img class="logo" src="https://i.imgur.com/oDO3Txm.jpg" alt="pinterest">
+          <span class="title">NYC</span>
+        </a>
+        <a href="#!" class="col s12 m6 l4 client black">
+          <img class="logo" src="https://i.imgur.com/4Z43hB9.jpg" alt="dribbble">
+          <span class="title">Boston </span>
+        </a>
+        <a href="#!" class="col s12 m6 l4 client black">
+          <img class="logo" src="https://i.imgur.com/oDO3Txm.jpg" alt="medium">
+          <span class="title">NYC</span>
+        </a>
+      </div>
+    </div>
 
     <!-- Pricing Tables -->
 
@@ -107,7 +132,7 @@
         <div background= "color: #cbdc00;" class="row">
           <div class="col s12 center">
             <h1>Your Strava Data</h1>
-            <div class="row">
+            <div class="row masonry-grid">
               <div class="col s12 m6 l4">
                 <div class="card">
                   <div class="card-image">
@@ -168,40 +193,30 @@
 
     <!-- Google Maps -->
    
-    <div class="section black clients">
-      <div class="container">
-        <h2 class="section-title">Past Races</h2>
-      </div>
-      <div class="row">
-        <a href="#!" class="col s12 m6 l4 client black">
-          <img class="logo" src="https://i.imgur.com/3KEOLq1.jpg" alt="google">
-          <span class="title">Berlin</span>
-        </a>
-        <a style= "background: #cbdc00" href="#!" class="col s12 m6 l4 client black">
-          <img class="logo" src="https://i.imgur.com/loxmWgn.jpg" alt="snapchat">
-          <span class="title">Brooklyn</span>
-        </a>
-        <a href="#!" class="col s12 m6 l4 client black" style= "background: #cbdc00">
-          <img class="logo" src="https://i.imgur.com/oDO3Txm.jpg" alt="messenger">
-          <span class="title">NYC</span>
-        </a>
-        <a href="#!" class="col s12 m6 l4 client black">
-          <img class="logo" src="https://i.imgur.com/oDO3Txm.jpg" alt="pinterest">
-          <span class="title">NYC</span>
-        </a>
-        <a href="#!" class="col s12 m6 l4 client black">
-          <img class="logo" src="https://i.imgur.com/4Z43hB9.jpg" alt="dribbble">
-          <span class="title">Boston </span>
-        </a>
-        <a href="#!" class="col s12 m6 l4 client black">
-          <img class="logo" src="https://i.imgur.com/oDO3Txm.jpg" alt="medium">
-          <span class="title">NYC</span>
-        </a>
-      </div>
-    </div>
+
     <!-- Contact Us -->
 
+    <div class="container">
+      <div class= "board">
+       
+       
+     <h2>Choose your week🏅</h2>
+     <div class="schedules">
+       <% schedules.forEach( schedule => { %>
+         <div class="card">
+           <h5>Week <%= schedule.weeknumber %></h5>
+           
+           <a href="/schedules/<%=schedule.id%>">
+             <img src="<%= schedule.img %>" alt="An image of <%= schedule.name %>" /></a>
+             <h6>Miles Prescribed: <%=schedule.price %></h6>
+             <a href="/schedules/<%=schedule.id%>">
+             <iframes height='405' width='590' frameborder='0' allowtransparency='true' scrolling='no'  src="<%= schedule.iframe %>" alt="An image of <%= schedule.iframe %>" /></a>
 
+         </div>
+       <% }) %>
+     </div>
+  
+   </div>
     <!-- Scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="js/materialize.min.js"></script>

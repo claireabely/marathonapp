@@ -11,12 +11,12 @@ const db = mongoose.connection
 // ___________________
 // Port (set up for hosting w. heroku)
 // ___________________
-const PORT = process.env.PORT || 8000
+const PORT = process.env.PORT || 7000
 
 // ___________________
 // Database
 // ___________________
-const mongoURI = process.env.MONGODBURI || 'mongodb://localhost:27017/marathonapp'
+const mongoURI = process.env.MONGODBURI || 'mongodb://localhost:27017/marathontrain'
 
 
 

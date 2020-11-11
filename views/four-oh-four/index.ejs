@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <title>Best Game Ever</title>
     <link rel="stylesheet" href="/css/four-oh-four.css">
+    <link rel="stylesheet" href="/css/skeleton.css">
+    <link rel="stylesheet" href="/css/main.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;400&display=swap" rel="stylesheet">
     <script
@@ -13,12 +15,28 @@
     <script src="/js/four-oh-four.js" charset="utf-8"></script></script>
   </head>
   <body>
-    <a href="/schedules">404 Error! Take me back to the Training plan!</a>
+    <a href="/schedules">Return To Homepage</a>
     <h1></h1>
-    <div class="container">
-      <h2></h2>
+    
+
       <div class="choose">
-       
+        <div class="container">
+          <h2>Add To Your Completed Races</h2>
+    
+            <div class="jumbo">
+              <form class="edit" action="/schedules" method="POST">
+                <label for="img2">Add An Image Link: </label>
+                <input type="text" name="img2" value="" id="img2">
+                <label for="text">Name of Race: </label>
+                <textarea name="text" value="" id="text"></textarea>
+              
+           
+                <input type="submit" name="submit" value="submit" class="edit-button">
+              </form>
+            </div>
+        </div>
+        </div>
+      </div>
       </div>
     </div>
     <div class="modal welcome">

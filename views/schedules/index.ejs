@@ -19,7 +19,7 @@
   <body>
 
     <!-- Navbar -->
-    <nav  >
+    <nav >
       <%- include ('../partials/header.ejs') -%>
 
 
@@ -27,25 +27,74 @@
      
     
     </nav>
-   
-    
-   
-    
+    <ul id="slide-out" class="sidenav">
+      <li class="no-padding">
+        <ul class="collapsible collapsible-accordion">
+          <li class="bold">
+            <a class="collapsible-header waves-effect waves-teal active">Pages</a>
+            <div class="collapsible-body">
+              <ul>
+           
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </li>
+      <li><a class="waves-effect waves-teal" href="blog.html">Your Strava Data</a></li>
+      <li><a class="waves-effect waves-teal" href="team.html">Team</a></li>
+      <li><a class="waves-effect waves-teal" href="docs/about.html">Docs</a></li>
+      <li><a class="waves-effect waves-teal" href="#">Buy Now!</a></li>
+    </ul>
 
     <div class="section header">
      
       <div class="header-wrapper row valign-wrapper">
         <div class="col s12">
           <h1 style= "color: #cbdc00;">Marathon Training Program</h1>
-          <button size: 70px; class="read-more"><img src= "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/271/sports-medal_1f3c5.png"></button>
+          <button size: 70px; class="read-more"><img src= ""></button>
         </div>
       </div>
     </div>
 
     <!-- Features -->
     
+    <div class="container">
+      <div class= "board">
+       
+       
+     <h2>Training Week</h2>
+     <div class="schedules">
+       <% schedules.forEach( schedule => { %>
+         <div class="card">
+           <h5>Week <%= schedule.weeknumber %></h5>
+           
+           <a href="/schedules/<%=schedule.id%>">
+             <img src="<%= schedule.img %>" alt="An image of <%= schedule.name %>" /></a>
+             <h6>Miles Prescribed: <%=schedule.price %></h6>
+             <a href="/schedules/<%=schedule.id%>">
+             <iframes height='405' width='590' frameborder='0' allowtransparency='true' scrolling='no'  src="<%= schedule.iframe %>" alt="An image of <%= schedule.iframe %>" /></a>
+         </div>
+       <% }) %>
+     </div>
+  
+   </div>
 
     <!-- Clients -->
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+
+
+    <!-- Pricing Tables -->
+
+    
+       
     <div class="section black clients">
       <div class="container">
         <h2 class="section-title">Past Races</h2>
@@ -77,12 +126,6 @@
         </a>
       </div>
     </div>
-
-    <!-- Pricing Tables -->
-
-    
-       
-
         
         
           
@@ -120,33 +163,7 @@
                 <div class="card">
                   <div class="card-image">
                     <iframe height='405' width='590' frameborder='0' allowtransparency='true' scrolling='no' src='https://www.strava.com/segments/852256/embed'></iframe> <div id="data"></div>
-                  
-                    <span class="card-title">Click Bait Article</span>
-                  </div>
-                </div>
-              </div>
-              <div class="col s12 m6 l4">
-                <div class="card">
-                  <div class="card-image">
-                    <iframe height='405' width='590' frameborder='0' allowtransparency='true' scrolling='no' src='https://www.strava.com/segments/7041089/embed'></iframe>
-                    <span class="card-title"></span>
-                  </div>
-                </div>
-              </div>
-              <div class="col s12 m6 l4">
-                <div class="card">
-                  <div class="card-image">
-                    <iframe height='500' width='300' frameborder='0' allowtransparency='true' scrolling='yes' src='https://www.strava.com/athletes/41240343/latest-rides/29e8e31373674e246d80850b8ace55c1d3fd5a5e'></iframe>
-        
-                    <span class="card-title"></span>
-                  </div>
-                </div>
-              </div>
-              <div class="col s12 m6 l4">
-                <div class="card">
-                  <div class="card-image">
-                    <iframe height='405' width='590' frameborder='0' allowtransparency='true' scrolling='no' src='https://www.strava.com/segments/852256/embed'></iframe>
-                    <span class="card-title"></span>
+              
                   </div>
                 </div>
               </div>
@@ -161,27 +178,6 @@
 
     <!-- Contact Us -->
 
-    <div class="container">
-      <div class= "board">
-       
-       
-     <h2>Choose your week🏅</h2>
-     <div class="schedules">
-       <% schedules.forEach( schedule => { %>
-         <div class="card">
-           <h5>Week <%= schedule.weeknumber %></h5>
-           
-           <a href="/schedules/<%=schedule.id%>">
-             <img src="<%= schedule.img %>" alt="An image of <%= schedule.name %>" /></a>
-             <h6>Miles Prescribed: <%=schedule.price %></h6>
-             <a href="/schedules/<%=schedule.id%>">
-             <iframes height='405' width='590' frameborder='0' allowtransparency='true' scrolling='no'  src="<%= schedule.iframe %>" alt="An image of <%= schedule.iframe %>" /></a>
-
-         </div>
-       <% }) %>
-     </div>
-  
-   </div>
     <!-- Scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="js/materialize.min.js"></script>
@@ -200,8 +196,6 @@
   </body>
 </html>
 <style>
-
-
   .container {
   position: relative;
   width: 100%;
@@ -214,15 +208,12 @@
   width: 100%;
   float: left;
   box-sizing: border-box; }
-
 /* For devices larger than 400px */
 @media (min-width: 400px) {
   .container {
     width: 85%;
     padding: 0; }
 }
-
-
 .schedules {
   display: flex;
   justify-content: space-between;
@@ -236,13 +227,11 @@
       width: 95%;
     }
 }
-
 .container {
   max-width: 37.5em;
   margin: auto;
   margin-top: 2em;
 }
-
 .card {
   flex-basis: 20%;
   text-align: center;
@@ -257,36 +246,28 @@
   
 }
 .card:hover {
-
 background-color: black;
 color: #FFF5EC;
 }
-
 .card h5 {
   padding-top: 1em;
   font-size: 1em;
 }
-
 img {
   max-width: 90%;
   max-height: 10vmax;
 }
-
 .card img:hover {
   box-shadow: 0 0 8px #96DADD;
 }
-
-
 p {
   max-width:70%;
   margin: auto;
 }
-
 .jumbo-img {
   max-width: 90%;
   max-height: 25vmax;
 }
-
 .jumbo {
   margin:auto;
   width:90%;
@@ -298,7 +279,6 @@ p {
   border-radius: 10%;
   border: .2em solid black;
 }
-
 .new-schedule {
   background-color: black;
   margin-top: 1em;
@@ -313,7 +293,6 @@ p {
   .card {
       flex-basis: 43%;
   }
-
 /* For devices larger than 550px */
 @media (min-width: 550px) {
   .container {
@@ -324,7 +303,6 @@ p {
   .column:first-child,
   .columns:first-child {
     margin-left: 0; }
-
   .one.column,
   .one.columns                    { width: 4.66666666667%; }
   .two.columns                    { width: 13.3333333333%; }
@@ -338,12 +316,9 @@ p {
   .ten.columns                    { width: 82.6666666667%; }
   .eleven.columns                 { width: 91.3333333333%; }
   .twelve.columns                 { width: 100%; margin-left: 0; }
-
   .one-third.column               { width: 30.6666666667%; }
   .two-thirds.column              { width: 65.3333333333%; }
-
   .one-half.column                { width: 48%; }
-
   /* Offsets */
   .offset-by-one.column,
   .offset-by-one.columns          { margin-left: 8.66666666667%; }
@@ -367,15 +342,12 @@ p {
   .offset-by-ten.columns          { margin-left: 86.6666666667%; }
   .offset-by-eleven.column,
   .offset-by-eleven.columns       { margin-left: 95.3333333333%; }
-
   .offset-by-one-third.column,
   .offset-by-one-third.columns    { margin-left: 34.6666666667%; }
   .offset-by-two-thirds.column,
   .offset-by-two-thirds.columns   { margin-left: 69.3333333333%; }
-
   .offset-by-one-half.column,
   .offset-by-one-half.columns     { margin-left: 52%; }
-
 }
 div.section.light.full-height{
   background-color: #cbdc00 !important;

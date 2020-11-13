@@ -2669,7 +2669,7 @@ a {
 blockquote {
   margin: 20px 0;
   padding-left: 1.5rem;
-  border-left: 5px solid #cbdc00;
+  border-left: 5px solid #000000;
 }
 
 i {
@@ -2729,7 +2729,7 @@ video.responsive-video {
 }
 
 .pagination li.active {
-  background-color: #cbdc00;
+  background-color: #000000;
 }
 
 .pagination li.disabled a {
@@ -2928,7 +2928,7 @@ ul.staggered-list li {
 .page-footer {
   padding-top: 20px;
   color: #fff;
-  background-color: #cbdc00;
+  background-color: #000000;
 }
 
 .page-footer .footer-copyright {
@@ -4247,7 +4247,7 @@ table span.badge {
 
 nav {
   color: #fff;
-  background-color: #cbdc00;
+  background-color: #000000;
   width: 100%;
   height: 56px;
   line-height: 56px;
@@ -8406,7 +8406,7 @@ input[type=range]::-ms-thumb {
   position: absolute;
   font-size: 1rem;
   border-radius: 50%;
-  background-color: #cbdc00;
+  background-color: #000000;
   box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.14), 0 10px 50px 0 rgba(0, 0, 0, 0.12), 0 30px 10px -20px rgba(0, 0, 0, 0.2);
   width: 100%;
   height: 100%;
@@ -9512,7 +9512,7 @@ input[type=range]::-ms-thumb {
 
 .pricing-table {
   margin-top: 50px;
-  border: 2px solid #cbdc00;
+  border: 2px solid #000000;
 }
 
 .pricing-table.featured {
@@ -9585,7 +9585,7 @@ input[type=range]::-ms-thumb {
 }
 
 .section.light .pricing-header i {
-  background-color: #cbdc00;
+  background-color: #000000;
 }
 
 .section.light .pricing-features .pricing-feature.disabled,
@@ -10430,7 +10430,7 @@ input[type=range]::-ms-thumb {
 }
 
 .blog-related li a {
-  color: #cbdc00;
+  color: #000000;
   display: block;
   transition: color .3s;
 }
@@ -10514,7 +10514,7 @@ input[type=range]::-ms-thumb {
 .avatar-wrapper:hover::after {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
-  border-color: #cbdc00;
+  border-color: #000000;
   transition: border-color 0.2s, -webkit-transform 0.2s cubic-bezier(0.06, 0.59, 0.24, 1.55);
   transition: transform 0.2s cubic-bezier(0.06, 0.59, 0.24, 1.55), border-color 0.2s;
   transition: transform 0.2s cubic-bezier(0.06, 0.59, 0.24, 1.55), border-color 0.2s, -webkit-transform 0.2s cubic-bezier(0.06, 0.59, 0.24, 1.55);
@@ -11517,15 +11517,15 @@ button:focus {
 }
 
 i {
-  color: #cbdc00;
+  color: #000000;
 }
 
 .primary-color {
-  background-color: #cbdc00 !important;
+  background-color: #000000 !important;
 }
 
 .primary-color-text {
-  color: #cbdc00 !important;
+  color: #000000 !important;
 }
 
 .divider {
@@ -11773,7 +11773,7 @@ nav.navbar .brand-logo i {
 }
 
 nav.navbar.pinned .brand-logo i {
-  color: #cbdc00;
+  color: #000000;
 }
 
 nav.navbar ul > li.active > a::before,

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+  
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Marathon Training Program</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <%- include ('../partials/head.ejs') -%> 
+    
+        <link rel="stylesheet" href="css/startup-materialize.min.css">
+        
+    
+        <!-- Material Icons -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        
+      </head>
+      <body>
+    
+        <!-- Navbar -->
+        <nav >
+          <%- include ('../partials/header.ejs') -%>
+    
+    
+      
+         
+        
+        </nav>
+	<body>
+		<header>
+			<h1>Articles</h1>
+			<nav>
+				<ul>
+					<li>
+						<a href="/">Home</a>
+                    </li>
+                    <main>
+                        <h2>List of Articles</h2>
+                        <ul>
+                            <% for(let i = 0; i < articles.length; i++){ %>
+                                <li>
+                                    <a href="/articles/<%=articles[i]._id%>"><%=articles[i].title%></a>
+                                </li>
+                            <% } %>
+                        </ul>
+                    </main>
+					<li>
+						<a href="/articles/new">Create a new Article</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+	</body>
+</html>

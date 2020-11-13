@@ -329,7 +329,7 @@ thead th {
 
 thead {
     z-index: 2;
-    background: #cbdc00;
+    background: #000000;
     border-bottom: 2px solid #ddd;
 
 }
@@ -391,7 +391,7 @@ tbody tr td {
 }
 
 .event {
-  background: #cbdc00;
+  background: #000000;
   color: black;
   border-radius: 2px;
   text-align: left;

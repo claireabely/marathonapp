@@ -1,21 +1,22 @@
+<head><link rel="stylesheet" href="css/startup-materialize.min.css"></head>
 <nav>
   
- 
+  <%- include ('../partials/head.ejs') -%> 
 
   <nav style= "background: #000000;" class="navbar navbar-solid-transition">
    
       <div style= "background: #000000;" class="nav-wrapper">
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <a href="/schedules" class="brand-logo"><img src= "https://runtrixapi.com/2017/images/NYRR/NYRRlong.png">
-      </i></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down" style= "background: #000000;" >
+     
 
-    <li><a style= "color: #ffffff;" href="/schedules/new" class="waves-effect waves-light btn-large">Add Workout</a></a></li>
-    <li><a style= "color: #ffffff;" href="/schedules/log" class="waves-effect waves-light btn-large">Log A Run</a></a></li>
-    <li><a style= "color: #ffffff;" href="/articles/new" class="waves-effect waves-light btn-large">Add to Completed Races</a></a></li>
- 
+    <li><a style= "color: #ffffff; background: #000000;" href="/schedules/new" class="waves-effect waves-light btn">Add Workout</a></a></li>
+    <li><a style= "color: #ffffff; background: #000000;" href="/schedules/log" class="waves-effect waves-light btn">Log A Run</a></a></li>
+    <li><a style= "color: #ffffff; background: #000000;" href="/articles/new" class="waves-effect waves-light btn">Add to Completed Races</a></a></li>
+    <li><a href="/schedules" class="brand-logo"><img src= "https://runtrixapi.com/2017/images/NYRR/NYRRlong.png" >
+    </i></a></li>
  
   </ul>
-      <!--Import Google Icon Font-->
+</div>    <!--Import Google Icon Font-->
 
 <ul id="pages" class="dropdown-content">
  
@@ -58,5 +59,11 @@ font-family: 'Monument Extended', sans-serif;
   font-weight: normal;
   font-style: normal;
 
+}
+thead th {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+    padding: 1rem;
 }
 </style>
